@@ -4,6 +4,7 @@
     "start": "nodemon --es-module-specifier-resolution=node app.js"
   },
   "dependencies": {
+    "@koa/cors": "^3.0.0",
     "jsonapi-serializer": "^3.6.5",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",

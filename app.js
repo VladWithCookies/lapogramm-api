@@ -1,4 +1,5 @@
 import Koa from 'koa'
+import cors from '@koa/cors'
 import logger from 'koa-logger'
 import BodyParser from 'koa-bodyparser'
 import mongoose from 'mongoose'
@@ -14,6 +15,7 @@ mongoose.connect(DATABASE_URL, {
   useUnifiedTopology: true,
 })
 
+app.use(cors())
 app.use(logger())
 app.use(BodyParser())
 
