@@ -19,6 +19,12 @@ class PostController {
 
     context.body = PostSerializer.serialize(post)
   }
+
+  destroy = async (context) => {
+    await Post.findByIdAndDelete(context.params.id)
+
+    context.status = 200
+  }
 }
 
 export default new PostController()
