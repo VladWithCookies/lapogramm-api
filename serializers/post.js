@@ -1,7 +1,7 @@
 import JSONAPISerializer from 'jsonapi-serializer'
 
 const PostSerializer = new JSONAPISerializer.Serializer('posts', {
-  attributes: ['description']
+  attributes: ['filename', 'description']
 })
 
 export default PostSerializer

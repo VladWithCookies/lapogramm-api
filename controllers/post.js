@@ -15,9 +15,12 @@ class PostController {
   }
 
   create = async (context) => {
-    const post = await Post.create(context.request.body)
+    const { filename } = context.request.file
+    const { description } = context.request.body
+    const post = await Post.create({ filename, description })
 
     context.body = PostSerializer.serialize(post)
+    context.status = 200
   }
 
   destroy = async (context) => {

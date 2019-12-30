@@ -5,6 +5,10 @@ const PostSchema = new mongoose.Schema({
     type: String,
     max: 250,
   },
+  filename: {
+    type: String,
+    required: true,
+  },
 })
 
 const PostModel = mongoose.model('Post', PostSchema)
