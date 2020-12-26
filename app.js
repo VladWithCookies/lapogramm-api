@@ -2,6 +2,7 @@ import Koa from 'koa'
 import cors from '@koa/cors'
 import serve from 'koa-static'
 import logger from 'koa-logger'
+import bodyParser from 'koa-bodyparser'
 import mongoose from 'mongoose'
 
 import router from './router'
@@ -17,6 +18,7 @@ mongoose.connect(DATABASE_URL, {
 
 app.use(cors())
 app.use(logger())
+app.use(bodyParser())
 app.use(router.routes())
 app.use(serve('./uploads'))
 app.use(router.allowedMethods())
