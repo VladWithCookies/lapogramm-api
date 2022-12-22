@@ -7,7 +7,7 @@
     "@koa/cors": "^3.0.0",
     "@koa/multer": "^2.0.2",
     "jsonapi-serializer": "^3.6.5",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.3.0",
     "koa-jwt": "^4.0.0",
